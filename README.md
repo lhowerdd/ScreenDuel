@@ -12,12 +12,18 @@ This project is still in a very preliminary stage. At this time I am working on 
 
 ## Current Issues
 The main roadblock at this point is getting code to run inside the ```DeviceActivityMonitorExtension```. 
-These are the current steps that have been taken to further narrow down the issue
-1. Authentication for ScreenTime is granted at the apps entry point
-2. The app and its extension have both been granted the App Groups and Family Controls Capabilities
+These are the current steps that have been taken to further narrow down this issue
+1. Authentication for FamilyControls is granted at the apps entry point
+2. The app and its extension have both been granted the ```App Groups``` and ```Family Controls``` Capabilities
 3. Both the app and its extension are in the same app group
-4. The app attempts to write the ```FamilyActivitySelection``` to the app groups shared userDefaults, but this needs furhter testing to confirm.
-5. In progress
+4. The PhoneBlocker extension's ```NSExtensionPrincipialClass``` found in the plist is the same as the class name in the swift file.
+5. The app attempts to write the ```FamilyActivitySelection``` to the app groups shared userDefaults, but this needs further testing to confirm.
+6. The ```intervalStart``` parameter for the ```DeviceActivitySchedule``` is offset by 20 seconds in order to prevent the ```invalidDateComponents``` error
 
+## Other goals
+1. Improving the UI is the next on the priority list after getting the basic functionality to work.
+2. Need to add an app icon at some point
+3. perhaps configure light/dark mode
 
-NOT COMPLETE
+## How to run
+I have developed this project with xcode 15.4 on my mac. The simulator provided by XCode does not seem to work well with the authorizing ```FamilyControls``` (maybe this is just my machine) so I build and run the application on my iPhone which currently has IOS 17.5.1. When setting up this project locally, ensure that both the main app and the ```DeviceActivityMonitorExtension``` (you will need to add this) are given the ```App Groups``` and ```Family Controls ```capabilities and that they are both in the same app group. Finally make sure that the class name in the extension is the same as the NSExtensionPrincipalClass in the Info.plist (info tab in project view).
