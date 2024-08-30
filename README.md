@@ -12,7 +12,7 @@ This project is still in a very preliminary stage. At this time I am working on 
 
 ## Current Issues
 The main roadblock at this point is getting code to run inside the ```DeviceActivityMonitorExtension```. 
-These are the current steps that have been taken to further narrow down this issue
+These are the current steps that have been taken to further narrow down the cause of this issue
 1. Authentication for FamilyControls is granted at the apps entry point
 2. The app and its extension have both been granted the ```App Groups``` and ```Family Controls``` Capabilities
 3. Both the app and its extension are in the same app group
