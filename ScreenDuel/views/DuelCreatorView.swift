@@ -60,10 +60,7 @@ struct DuelCreatorView: View {
             print("before monitor")
             try center.startMonitoring(.duelSession, during: schedule)
             print("after monitor")
-            
-            
             //push DuelSessionView onto nav stack (see navigation destination)
-            //duelSession.startDuelSession()
             navPath.append(1)
             sessionInProgress = true
         }

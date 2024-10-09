@@ -79,10 +79,14 @@ func formatTime(totalSeconds: Int) -> String {
 
 func formatDate(_ dateComp: DateComponents) -> String {
     guard let hour = dateComp.hour,
-              let day = dateComp.day,
-              let minute = dateComp.minute,
-              let second = dateComp.second else {
+        let year = dateComp.year,
+        let month = dateComp.month,
+        let day = dateComp.day,
+        let minute = dateComp.minute,
+        let second = dateComp.second 
+        
+        else {
             return ""
         }
-    return String(format: "Day:%d  %02d:%02d:%02d", day, hour, minute, second)
+    return String(format: "%d/%d/%d at  %02d:%02d:%02d", month, day, year, hour, minute, second)
 }

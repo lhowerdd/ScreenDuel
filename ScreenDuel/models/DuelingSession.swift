@@ -18,7 +18,9 @@ struct DuelingSession {
     var hours: Int
     //how many minutes the session is
     var minutes: Int
-    //abstraction of apps selected in the session
+    //start time is delayed delay seconds to prevent monitoring errors
+    let delay: Int
+    //abstraction of apps selected in the session that will be blocked
     var duelSelection: FamilyActivitySelection
     
     private var startTime: DateComponents = DateComponents()
@@ -28,6 +30,8 @@ struct DuelingSession {
     init(hours: Int, minutes: Int) {
         self.minutes = minutes
         self.hours = hours
+        //delay currently 5 seconds
+        self.delay = 5
         self.duelSelection = FamilyActivitySelection()
     }
     
@@ -37,28 +41,20 @@ struct DuelingSession {
     }
     
     /*/
-    sets startTime to 20 seconds after the time at the function call and then adds the length of
-    the duel session to startTime to calculate endTime
+    sets self.startTime to *delay* seconds after the time at the function call
+    sets self.endTime to self.hours:self.minutes after the start time
     */
     mutating func setTimeBounds() {
-        let currentDate = Date()
-        let startInterval = currentDate.addingTimeInterval(20) // 20 seconds after the current time
-        
         let calendar = Calendar.current
+        let now = Date()
+        //set seconds to whatever the delay is
+        let sessionLength = DateComponents(hour: self.hours, minute: self.minutes, second: self.delay)
+        let delay = DateComponents(second: self.delay)
+        let startTimeDate = calendar.date(byAdding: delay, to: now, wrappingComponents: false)
+        let endTimeDate = calendar.date(byAdding: sessionLength, to: now, wrappingComponents: false)
         
-        // Convert start interval to DateComponents
-        startTime = calendar.dateComponents([.year, .month, .day, .hour, .minute, .second], from: startInterval)
-        
-        // Calculate end interval by adding the specified hours and minutes to the start interval
-        var dateComponents = DateComponents()
-        dateComponents.hour = hours
-        dateComponents.minute = minutes
-        
-        let endInterval = calendar.date(byAdding: dateComponents, to: startInterval)!
-        
-        // Convert end interval to DateComponents
-        endTime = calendar.dateComponents([.year,.month, .day, .hour, .minute, .second], from: endInterval)
-        //return DeviceActivitySchedule(intervalStart: startComponents, intervalEnd: endComponents, repeats: false)
+        self.startTime = calendar.dateComponents([.year, .month, .day, .hour, .minute, .second], from: startTimeDate!)
+        self.endTime = calendar.dateComponents([.year, .month, .day, .hour, .minute, .second], from: endTimeDate!)
     }
     
     
