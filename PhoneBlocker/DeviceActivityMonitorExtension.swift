@@ -24,6 +24,7 @@ class DeviceActivityMonitorExtension: DeviceActivityMonitor {
     
     override func intervalDidStart(for activity: DeviceActivityName) {
         print("inside extension")
+        NSLog("inside extension")
         super.intervalDidStart(for: activity)
         let duelMessenger = DuelMessenger()
         let applications = duelMessenger.decodeDuelSelection().applicationTokens

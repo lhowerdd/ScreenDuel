@@ -24,6 +24,7 @@ struct DuelingSession {
     private var startTime: DateComponents = DateComponents()
     private var endTime: DateComponents = DateComponents()
     
+  
     init(hours: Int, minutes: Int) {
         self.minutes = minutes
         self.hours = hours
@@ -69,6 +70,6 @@ struct DuelingSession {
     func getEndTime() -> DateComponents {
         return endTime
     }
-
+    
     
 }

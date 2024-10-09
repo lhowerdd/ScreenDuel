@@ -28,6 +28,9 @@ class DuelTimer {
     }
     
     func startTimer() {
+        if isTimerRunning {
+            return
+        }
         isTimerRunning = true
         timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) {[self] _ in
             if timeRemaining > 0 {

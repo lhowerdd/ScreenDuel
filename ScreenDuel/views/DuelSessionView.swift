@@ -17,8 +17,7 @@ struct DuelSessionView: View {
     
     @Binding var navPath: [Int]
     @Binding var sessionInProgress: Bool
-    let duelSession: DuelingSession
-    
+    @State var duelSession: DuelingSession
     let duelTimer: DuelTimer
     
     
@@ -33,7 +32,7 @@ struct DuelSessionView: View {
             .contentTransition(.numericText())
             
             //pause and play buttons
-            /*
+            
             HStack {
                 Button {duelTimer.startTimer()}
                     label: { Image(systemName: "play.fill")}
@@ -42,12 +41,13 @@ struct DuelSessionView: View {
                     label: {Image(systemName: "pause.fill")}
                     .disabled(duelTimer.pauseButtonDisabled)
             }
-            */
+            
             Text("start time: \(formatDate(duelSession.getStartTime()))")
             Text("end time: \(formatDate(duelSession.getEndTime()))")
             
             Text("in duel session")
             //button that appears after duel session is over
+            
             if(duelTimer.isTimerRunning == false) {
                 Button(action: {
                     navPath = []
@@ -55,6 +55,7 @@ struct DuelSessionView: View {
                     }) {
                     Text("Exit duel session")}
             }
+            
         }
         .navigationBarBackButtonHidden(true)
         .navigationBarHidden(true)
