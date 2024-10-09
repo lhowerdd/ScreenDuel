@@ -10,7 +10,7 @@ import FamilyControls
 
 /*
 This struct is the entry point to the app.
-It will request authorization for screen time capabilility
+It will request authorization for the screen time capabilility
 and will not enter the main app until this authorization
 is granted
 */
@@ -53,15 +53,20 @@ class FamilyControlsAuthorizer: ObservableObject {
         }
     }
     //call this to request authorization
+    //dispatch queue ensures changes to authorization are publishedo on the main thread
     final func authorize() async {
         let center = AuthorizationCenter.shared
         do {
             try await center.requestAuthorization(for: FamilyControlsMember.individual)
-            authorized = true
+            DispatchQueue.main.async {
+                self.authorized = true
+            }
         }
         catch {
             print("authorization failed")
-            authorized = false
+            DispatchQueue.main.async{
+                self.authorized = false
+            }
         }
     }
 }
