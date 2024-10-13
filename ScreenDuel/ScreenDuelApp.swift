@@ -53,7 +53,7 @@ class FamilyControlsAuthorizer: ObservableObject {
         }
     }
     //call this to request authorization
-    //dispatch queue ensures changes to authorization are publishedo on the main thread
+    //dispatch queue ensures changes to authorization are published on the main thread
     final func authorize() async {
         let center = AuthorizationCenter.shared
         do {

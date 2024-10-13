@@ -36,9 +36,11 @@ class DeviceActivityMonitorExtension: DeviceActivityMonitor {
         super.intervalDidEnd(for: activity)
         store.shield.applications = nil
         // Handle the end of the interval.
+        let duelMessenger = DuelMessenger()
+        duelMessenger.clearSession()
     }
     
-    /*
+    
     override func eventDidReachThreshold(_ event: DeviceActivityEvent.Name, activity: DeviceActivityName) {
         super.eventDidReachThreshold(event, activity: activity)
         
@@ -62,5 +64,5 @@ class DeviceActivityMonitorExtension: DeviceActivityMonitor {
         
         // Handle the warning before the event reaches its threshold.
     }
-    */
+    
 }

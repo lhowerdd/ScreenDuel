@@ -54,7 +54,6 @@ struct DuelCreatorView: View {
         let schedule = DeviceActivitySchedule(intervalStart: duelSession.getStartTime(), intervalEnd: duelSession.getEndTime(), repeats: false)
         let center = DeviceActivityCenter()
         let duelMessenger = DuelMessenger()
-        //this writes the FamilyActivitySelection to the shared userDefaults and calls the app extension
         do {
             duelMessenger.encodeDuelSelection(selection: duelSession.duelSelection)
             print("before monitor")

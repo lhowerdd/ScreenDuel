@@ -11,7 +11,7 @@ import FamilyControls
 
 /*
 this struct provides methods that write and fetch
-the FamilyActivitySelection to the shared userDefaults
+the FamilyActivitySelection to the app groups shared userDefaults
 so that the app extension can access it
 */
  struct DuelMessenger {
@@ -38,7 +38,6 @@ so that the app extension can access it
                     let decoder = JSONDecoder()
                     let selection = try decoder.decode(FamilyActivitySelection.self, from: encodedSelection)
                     duelSelection = selection
-                    userDefaults.removeObject(forKey: "DuelSession")
                 }
             }
             catch {
@@ -47,6 +46,12 @@ so that the app extension can access it
         }
         return duelSelection
     }
+     
+     func clearSession() {
+         if let userDefaults = UserDefaults(suiteName: "group.com.ScreenDuel") {
+             userDefaults.removeObject(forKey: "DuelSession")
+         }
+     }
     
     
 }
