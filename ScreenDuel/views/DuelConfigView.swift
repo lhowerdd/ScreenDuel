@@ -23,30 +23,32 @@ struct DuelConfigView: View {
     
     var body: some View {
         VStack {
+        
             Section(header: Text("Create a ScreenDuel Session")){
                 
-                    Button(action: {
-                        isShowingTimeSheet = true
-                    }) {
-                        ListCellView(text: "Session Length: \(duelSession.hours)h \(duelSession.minutes)m")
-                    }
-                    .sheet(isPresented: $isShowingTimeSheet) {
-                        TimePickerView(isShowingTimeSheet: $isShowingTimeSheet , duelingSession: $duelSession)
-                    }
+                Button(action: {
+                    isShowingTimeSheet = true
+                }) {
+                    ListCellView(text: "Session Length: \(duelSession.hours)h \(duelSession.minutes)m")
+                }
+                .sheet(isPresented: $isShowingTimeSheet) {
+                    TimePickerView(isShowingTimeSheet: $isShowingTimeSheet , duelingSession: $duelSession)
+                }
                 
-                    
-                    Button(action: {
-                        isShowingAppSheet = true
-                    }) {
-                        ListCellView(text: "Select apps to block")
-                    }
-                    .sheet(isPresented: $isShowingAppSheet) {
-                        AppPickerView(duelSession: $duelSession, isShowingAppSheet: $isShowingAppSheet)
-                    }
+                
+                Button(action: {
+                    isShowingAppSheet = true
+                }) {
+                    ListCellView(text: "Select apps to block")
+                }
+                .sheet(isPresented: $isShowingAppSheet) {
+                    AppPickerView(duelSession: $duelSession, isShowingAppSheet: $isShowingAppSheet)
+                }
                 
                 
             }
         }
+        
     }
     
     

@@ -19,7 +19,6 @@
 		16970E682C76D3F800E3CED1 /* PhoneBlocker.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 16970E5D2C76D3F800E3CED1 /* PhoneBlocker.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		16D5E8432C76D93A00AA2411 /* DuelingSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D5E8422C76D93A00AA2411 /* DuelingSession.swift */; };
 		16D5E8452C76D94F00AA2411 /* DuelTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D5E8442C76D94F00AA2411 /* DuelTimer.swift */; };
-		16D5E8472C76D95700AA2411 /* TimerObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D5E8462C76D95700AA2411 /* TimerObject.swift */; };
 		16D5E8492C76D98800AA2411 /* AppPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D5E8482C76D98800AA2411 /* AppPickerView.swift */; };
 		16D5E84B2C76D98D00AA2411 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D5E84A2C76D98C00AA2411 /* AppView.swift */; };
 		16D5E84D2C76D99C00AA2411 /* DuelConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D5E84C2C76D99C00AA2411 /* DuelConfigView.swift */; };
@@ -89,7 +88,6 @@
 		16970E652C76D3F800E3CED1 /* PhoneBlocker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PhoneBlocker.entitlements; sourceTree = "<group>"; };
 		16D5E8422C76D93A00AA2411 /* DuelingSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DuelingSession.swift; sourceTree = "<group>"; };
 		16D5E8442C76D94F00AA2411 /* DuelTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DuelTimer.swift; sourceTree = "<group>"; };
-		16D5E8462C76D95700AA2411 /* TimerObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerObject.swift; sourceTree = "<group>"; };
 		16D5E8482C76D98800AA2411 /* AppPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppPickerView.swift; sourceTree = "<group>"; };
 		16D5E84A2C76D98C00AA2411 /* AppView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
 		16D5E84C2C76D99C00AA2411 /* DuelConfigView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DuelConfigView.swift; sourceTree = "<group>"; };
@@ -231,7 +229,6 @@
 		16970E6E2C76D4D200E3CED1 /* models */ = {
 			isa = PBXGroup;
 			children = (
-				16D5E8462C76D95700AA2411 /* TimerObject.swift */,
 				16D5E8442C76D94F00AA2411 /* DuelTimer.swift */,
 				16D5E8422C76D93A00AA2411 /* DuelingSession.swift */,
 				16D5E8562C76EE6700AA2411 /* DuelMessenger.swift */,
@@ -408,7 +405,6 @@
 				16D5E84B2C76D98D00AA2411 /* AppView.swift in Sources */,
 				16D5E8492C76D98800AA2411 /* AppPickerView.swift in Sources */,
 				16D5E84D2C76D99C00AA2411 /* DuelConfigView.swift in Sources */,
-				16D5E8472C76D95700AA2411 /* TimerObject.swift in Sources */,
 				16D5E8532C76D9B100AA2411 /* ListCellView.swift in Sources */,
 				16970E2A2C76D2B100E3CED1 /* ScreenDuelApp.swift in Sources */,
 				16D5E8512C76D9AA00AA2411 /* DuelSessionView.swift in Sources */,
