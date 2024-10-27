@@ -4,7 +4,7 @@
 The goal of this project is to create an ios application that allows users to limit their screen time usage by forcefully blocking their apps. While many apps already provide this functionality, ScreenDuel seeks to differ itself by adding multiplayer features in some form.
 
 ## Implementation Strategy
-The current approach is to use the ScreenTime API provided by Apple to shield the users applications. Some kind of connection, possibly via bluetooth or a remote server, will be used to connect users before a "ScreenDuel Session" to ensure that the same rules are applied to each phone. 
+The current approach is to use the ScreenTime API provided by Apple to shield the users applications. 
 
 ## Current Sate Of The Project
 This project is still in a very preliminary stage. At this time I am working on configuring the 
