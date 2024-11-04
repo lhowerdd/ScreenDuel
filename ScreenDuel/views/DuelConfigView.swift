@@ -35,7 +35,7 @@ struct DuelConfigView: View {
                     TimePickerView(isShowingTimeSheet: $isShowingTimeSheet , duelingSession: $duelSession)
                 }
                 
-                
+                /*
                 Button(action: {
                     isShowingAppSheet = true
                 }) {
@@ -44,7 +44,7 @@ struct DuelConfigView: View {
                 .sheet(isPresented: $isShowingAppSheet) {
                     AppPickerView(duelSession: $duelSession, isShowingAppSheet: $isShowingAppSheet)
                 }
-                
+                */
                 
             }
         }

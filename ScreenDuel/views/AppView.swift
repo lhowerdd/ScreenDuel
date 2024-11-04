@@ -10,7 +10,7 @@ import SwiftUI
 
 
 /*
- This view holds the main app structure.
+ This view holds the main app navigation hierarchy.
  Currently the user can swipe between the DuelCreatorView and a
  dummy placeholder view
  */

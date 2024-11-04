@@ -18,7 +18,7 @@ struct DuelingSession {
     var hours: Int
     //how many minutes the session is
     var minutes: Int
-    //start time is delayed delay seconds to prevent monitoring errors
+    //start time is delayed by delay seconds to prevent monitoring errors
     let delay: Int
     //abstraction of apps selected in the session that will be blocked
     var duelSelection: FamilyActivitySelection
@@ -30,7 +30,6 @@ struct DuelingSession {
     init(hours: Int, minutes: Int) {
         self.minutes = minutes
         self.hours = hours
-        //delay currently 5 seconds
         self.delay = 5
         self.duelSelection = FamilyActivitySelection()
     }
@@ -40,7 +39,7 @@ struct DuelingSession {
         return DuelTimer(hours: self.hours, minutes: self.minutes)
     }
     
-    /*/
+    /*
     sets self.startTime to *delay* seconds after the time at the function call
     sets self.endTime to self.hours:self.minutes after the start time
     */
@@ -66,6 +65,18 @@ struct DuelingSession {
     func getEndTime() -> DateComponents {
         return endTime
     }
-    
-    
 }
+
+
+//view for selecting specific apps that is currently not in use
+
+/*
+Button(action: {
+    isShowingAppSheet = true
+}) {
+    ListCellView(text: "Select apps to block")
+}
+.sheet(isPresented: $isShowingAppSheet) {
+    AppPickerView(duelSession: $duelSession, isShowingAppSheet: $isShowingAppSheet)
+}
+*/

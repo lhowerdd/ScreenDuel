@@ -52,6 +52,5 @@ so that the app extension can access it
              userDefaults.removeObject(forKey: "DuelSession")
          }
      }
-    
-    
+     
 }

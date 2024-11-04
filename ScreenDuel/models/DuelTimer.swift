@@ -59,3 +59,16 @@ class DuelTimer {
         return false
     }
 }
+
+//pause and play buttons
+
+/*
+HStack {
+    Button {duelTimer.startTimer()}
+        label: { Image(systemName: "play.fill")}
+        .disabled(duelTimer.playButtonDisabled)
+    Button {duelTimer.stopTimer()}
+        label: {Image(systemName: "pause.fill")}
+        .disabled(duelTimer.pauseButtonDisabled)
+}
+*/
