@@ -4,15 +4,16 @@
 The goal of this project is to create an ios application that allows users to limit their screen time usage by forcefully blocking their apps. While many apps already provide this functionality, ScreenDuel seeks to differ itself by adding multiplayer features in some form.
 
 ## Implementation Strategy
-The current approach is to use the ScreenTime API provided by Apple to shield the users applications. 
+The current approach is to use the ScreenTime API provided by Apple to shield the users applications. Different options are currently being explored for implementing the backend, but some kind of remote database or webserver will be almost likely be needed. AWS is looking like the headliner to meet these needs.
 
 ## Current Sate Of The Project
-This project is still in a very preliminary stage. At this time I am working on configuring the 
-```DeviceActivityMonitorExtension``` found in the **PhoneBlocker** directory. This extension is the entry point for shielding and unshielding applications on the users ios device as per apple's documentation
+This project is still in a very preliminary stage. At this time, the user can shield all apps that are not provided by apple themselves for a duration of time that they select. Next steps involve fixing eraneous warnings, and proceeding to implement multiplayer functionality with a backend webserver. 
 
 ## Current Issues
 ### shielding extension
-The main roadblock at this point is getting code to run inside the ```DeviceActivityMonitorExtension```. 
+
+Efforts have been made to get code to run in the ```DeviceActivityMonitorExtension```. However, this extension is likely not needed for the app to meet its goal specification, as apps can be shielded from the main app. However, for those interested, the efforts made to configure the extension are listed below.
+
 These are the current steps that have been taken to further narrow down the cause of this issue
 1. Authentication for FamilyControls is granted at the apps entry point
 2. The app and its extension have both been granted the ```App Groups``` and ```Family Controls``` Capabilities
