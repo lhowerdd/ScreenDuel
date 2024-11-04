@@ -34,7 +34,7 @@ struct DuelCreatorView: View {
                 .padding(.top)
             }
             .navigationDestination(isPresented: $sessionInProgress) {
-                DuelSessionView(navPath: $navPath, sessionInProgress: $sessionInProgress, duelSession: duelSession, duelTimer: duelSession.createDuelTimer())
+                DuelSessionView(navPath: $navPath, sessionInProgress: $sessionInProgress, duelSession: duelSession, backgroundTimer: BackgroundTimer(seconds: duelSession.getTotalSeconds()))
             }
             .navigationBarHidden(true)
         }
