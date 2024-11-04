@@ -28,6 +28,7 @@
 		16D5E8552C76D9B500AA2411 /* TimePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D5E8542C76D9B500AA2411 /* TimePickerView.swift */; };
 		16D5E8572C76EE6700AA2411 /* DuelMessenger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D5E8562C76EE6700AA2411 /* DuelMessenger.swift */; };
 		16D5E8582C77085400AA2411 /* DuelMessenger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D5E8562C76EE6700AA2411 /* DuelMessenger.swift */; };
+		16F1F1632CD92E79006B1890 /* background_timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F1F1622CD92E79006B1890 /* background_timer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +97,7 @@
 		16D5E8522C76D9B100AA2411 /* ListCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListCellView.swift; sourceTree = "<group>"; };
 		16D5E8542C76D9B500AA2411 /* TimePickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimePickerView.swift; sourceTree = "<group>"; };
 		16D5E8562C76EE6700AA2411 /* DuelMessenger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuelMessenger.swift; sourceTree = "<group>"; };
+		16F1F1622CD92E79006B1890 /* background_timer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = background_timer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -232,6 +234,7 @@
 				16D5E8442C76D94F00AA2411 /* DuelTimer.swift */,
 				16D5E8422C76D93A00AA2411 /* DuelingSession.swift */,
 				16D5E8562C76EE6700AA2411 /* DuelMessenger.swift */,
+				16F1F1622CD92E79006B1890 /* background_timer.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -408,6 +411,7 @@
 				16D5E8532C76D9B100AA2411 /* ListCellView.swift in Sources */,
 				16970E2A2C76D2B100E3CED1 /* ScreenDuelApp.swift in Sources */,
 				16D5E8512C76D9AA00AA2411 /* DuelSessionView.swift in Sources */,
+				16F1F1632CD92E79006B1890 /* background_timer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

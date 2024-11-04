@@ -30,7 +30,7 @@ struct DuelingSession {
     init(hours: Int, minutes: Int) {
         self.minutes = minutes
         self.hours = hours
-        self.delay = 5
+        self.delay = 0
         self.duelSelection = FamilyActivitySelection()
     }
     
@@ -65,6 +65,12 @@ struct DuelingSession {
     func getEndTime() -> DateComponents {
         return endTime
     }
+    
+    
+    func getTotalSeconds() -> Int {
+        return (self.hours * 3600) + (self.minutes * 60)
+    }
+    
 }
 
 
