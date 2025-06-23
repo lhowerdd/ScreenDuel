@@ -19,6 +19,11 @@ struct ScreenDuelApp: App {
 
     @StateObject var familyControlsAuthorizer: FamilyControlsAuthorizer = FamilyControlsAuthorizer()
     
+    init() {
+        
+    }
+    
+    
     var body: some Scene {
         WindowGroup {
             if familyControlsAuthorizer.authorized {
