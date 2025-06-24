@@ -15,23 +15,40 @@ import SwiftUI
  dummy placeholder view
  */
 struct AppView: View {
-    @State private var selectedIndex = 0
 
-    var body: some View {
-        
-        TabView {
-            DuelCreatorView()
-                .tabItem {
-                    Image(systemName: "shield.slash").font(.system(size: 26))
-                }
-            Text("duel score")
-                .tabItem {
-                    Image(systemName: "brain.fill").font(.system(size: 26))
-                }
-        }
-        .tabViewStyle(PageTabViewStyle())
-    }
+    @State private var profileOpen = false
     
+    var body: some View {
+        NavigationStack() {
+            VStack {
+                TopBar(
+                    onProfileTap: {
+                        profileOpen = true
+                    },
+                    onBellTap: {
+                        return
+                    }
+                )
+                
+                Divider()
+                
+                TabView {
+                    DuelCreatorView()
+                        .tabItem {
+                            Image(systemName: "shield.slash").font(.system(size: 40))
+                        }
+                    Text("duel score")
+                        .tabItem {
+                            Image(systemName: "brain.fill").font(.system(size: 40))
+                        }
+                }
+                .tabViewStyle(PageTabViewStyle())
+            }
+            .navigationDestination(isPresented: $profileOpen) {
+                ProfileView()
+            }
+        }
+    }
 }
 
 
