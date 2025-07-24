@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		162BFC762E0A028300BF9109 /* TopBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162BFC752E0A028300BF9109 /* TopBar.swift */; };
 		162BFC782E0A2E6200BF9109 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162BFC772E0A2E6200BF9109 /* ProfileView.swift */; };
+		162BFC7B2E0CD71B00BF9109 /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162BFC7A2E0CD71B00BF9109 /* EditProfileView.swift */; };
 		16970E2A2C76D2B100E3CED1 /* ScreenDuelApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16970E292C76D2B100E3CED1 /* ScreenDuelApp.swift */; };
 		16970E2E2C76D2B200E3CED1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16970E2D2C76D2B200E3CED1 /* Assets.xcassets */; };
 		16970E312C76D2B200E3CED1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16970E302C76D2B200E3CED1 /* Preview Assets.xcassets */; };
@@ -30,6 +31,10 @@
 		16D5E8552C76D9B500AA2411 /* TimePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D5E8542C76D9B500AA2411 /* TimePickerView.swift */; };
 		16D5E8572C76EE6700AA2411 /* DuelMessenger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D5E8562C76EE6700AA2411 /* DuelMessenger.swift */; };
 		16D5E8582C77085400AA2411 /* DuelMessenger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D5E8562C76EE6700AA2411 /* DuelMessenger.swift */; };
+		16EA9A972E316F7F005190DE /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EA9A962E316F7F005190DE /* Route.swift */; };
+		16EA9A992E316F98005190DE /* NavigationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EA9A982E316F98005190DE /* NavigationRouter.swift */; };
+		16EA9A9B2E317190005190DE /* NavigationOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EA9A9A2E317190005190DE /* NavigationOptions.swift */; };
+		16EA9A9D2E31938F005190DE /* DummyDuelCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EA9A9C2E31938F005190DE /* DummyDuelCreator.swift */; };
 		16F1F1632CD92E79006B1890 /* background_timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F1F1622CD92E79006B1890 /* background_timer.swift */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +79,7 @@
 /* Begin PBXFileReference section */
 		162BFC752E0A028300BF9109 /* TopBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBar.swift; sourceTree = "<group>"; };
 		162BFC772E0A2E6200BF9109 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		162BFC7A2E0CD71B00BF9109 /* EditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
 		1666E3D22C811B4900CD265C /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		16970E262C76D2B100E3CED1 /* ScreenDuel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScreenDuel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16970E292C76D2B100E3CED1 /* ScreenDuelApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenDuelApp.swift; sourceTree = "<group>"; };
@@ -101,6 +107,10 @@
 		16D5E8522C76D9B100AA2411 /* ListCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListCellView.swift; sourceTree = "<group>"; };
 		16D5E8542C76D9B500AA2411 /* TimePickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimePickerView.swift; sourceTree = "<group>"; };
 		16D5E8562C76EE6700AA2411 /* DuelMessenger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuelMessenger.swift; sourceTree = "<group>"; };
+		16EA9A962E316F7F005190DE /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
+		16EA9A982E316F98005190DE /* NavigationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationRouter.swift; sourceTree = "<group>"; };
+		16EA9A9A2E317190005190DE /* NavigationOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationOptions.swift; sourceTree = "<group>"; };
+		16EA9A9C2E31938F005190DE /* DummyDuelCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyDuelCreator.swift; sourceTree = "<group>"; };
 		16F1F1622CD92E79006B1890 /* background_timer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = background_timer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -146,6 +156,14 @@
 			path = homeComponents;
 			sourceTree = "<group>";
 		};
+		162BFC792E0CD70100BF9109 /* profileComponents */ = {
+			isa = PBXGroup;
+			children = (
+				162BFC7A2E0CD71B00BF9109 /* EditProfileView.swift */,
+			);
+			path = profileComponents;
+			sourceTree = "<group>";
+		};
 		16970E1D2C76D2B100E3CED1 = {
 			isa = PBXGroup;
 			children = (
@@ -173,6 +191,7 @@
 		16970E282C76D2B100E3CED1 /* ScreenDuel */ = {
 			isa = PBXGroup;
 			children = (
+				16EA9A952E316F5E005190DE /* navigation */,
 				16970E6E2C76D4D200E3CED1 /* models */,
 				16970E6D2C76D4CB00E3CED1 /* views */,
 				16970E582C76D31900E3CED1 /* ScreenDuel.entitlements */,
@@ -230,6 +249,7 @@
 		16970E6D2C76D4CB00E3CED1 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				162BFC792E0CD70100BF9109 /* profileComponents */,
 				162BFC742E09FEBC00BF9109 /* homeComponents */,
 				16D5E8542C76D9B500AA2411 /* TimePickerView.swift */,
 				16D5E8522C76D9B100AA2411 /* ListCellView.swift */,
@@ -238,6 +258,7 @@
 				16D5E8482C76D98800AA2411 /* AppPickerView.swift */,
 				16D5E84E2C76D9A500AA2411 /* DuelCreatorView.swift */,
 				16D5E8502C76D9AA00AA2411 /* DuelSessionView.swift */,
+				16EA9A9C2E31938F005190DE /* DummyDuelCreator.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -251,6 +272,16 @@
 				16F1F1622CD92E79006B1890 /* background_timer.swift */,
 			);
 			path = models;
+			sourceTree = "<group>";
+		};
+		16EA9A952E316F5E005190DE /* navigation */ = {
+			isa = PBXGroup;
+			children = (
+				16EA9A962E316F7F005190DE /* Route.swift */,
+				16EA9A982E316F98005190DE /* NavigationRouter.swift */,
+				16EA9A9A2E317190005190DE /* NavigationOptions.swift */,
+			);
+			path = navigation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -415,12 +446,17 @@
 			files = (
 				16D5E84F2C76D9A500AA2411 /* DuelCreatorView.swift in Sources */,
 				16D5E8552C76D9B500AA2411 /* TimePickerView.swift in Sources */,
+				16EA9A9B2E317190005190DE /* NavigationOptions.swift in Sources */,
+				162BFC7B2E0CD71B00BF9109 /* EditProfileView.swift in Sources */,
 				16D5E8452C76D94F00AA2411 /* DuelTimer.swift in Sources */,
 				16D5E8432C76D93A00AA2411 /* DuelingSession.swift in Sources */,
 				16D5E8572C76EE6700AA2411 /* DuelMessenger.swift in Sources */,
+				16EA9A9D2E31938F005190DE /* DummyDuelCreator.swift in Sources */,
 				16970E362C76D2B200E3CED1 /* ScreenDuel.xcdatamodeld in Sources */,
 				16D5E84B2C76D98D00AA2411 /* AppView.swift in Sources */,
+				16EA9A992E316F98005190DE /* NavigationRouter.swift in Sources */,
 				162BFC782E0A2E6200BF9109 /* ProfileView.swift in Sources */,
+				16EA9A972E316F7F005190DE /* Route.swift in Sources */,
 				16D5E8492C76D98800AA2411 /* AppPickerView.swift in Sources */,
 				16D5E84D2C76D99C00AA2411 /* DuelConfigView.swift in Sources */,
 				162BFC762E0A028300BF9109 /* TopBar.swift in Sources */,

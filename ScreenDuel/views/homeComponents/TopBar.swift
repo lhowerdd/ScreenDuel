@@ -10,14 +10,13 @@ import SwiftUI
 
 struct TopBar: View {
     
-    var onProfileTap: () -> Void
-    var onBellTap: () -> Void
-    
+    var routerManager: NavigationRouter
     
     var body: some View {
         HStack {
+            
             Button(action: {
-                onProfileTap()
+                routerManager.push(to: .profile)
             }) {
                 Image(systemName: "person.crop.circle")
             }
@@ -27,7 +26,6 @@ struct TopBar: View {
             Spacer()
             
             Button(action: {
-                onBellTap()
             }) {
                 Image(systemName: "bell")
             }
