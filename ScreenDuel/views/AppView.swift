@@ -42,6 +42,8 @@ struct AppView: View {
     
     @StateObject private var routerManager = NavigationRouter()
     
+    
+    
     var body: some View {
         NavigationStack(path: $routerManager.routes) {
             VStack {

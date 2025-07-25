@@ -14,22 +14,35 @@ It will request authorization for the screen time capabilility
 and will not enter the main app until this authorization
 is granted
 */
+
+
+/*TODO: Check family controls authorization when returning from background*/
 @main
 struct ScreenDuelApp: App {
 
     @StateObject var familyControlsAuthorizer: FamilyControlsAuthorizer = FamilyControlsAuthorizer()
     
+    @State var loggedIn: Bool
+    
     init() {
-        
+        self.loggedIn = isLoggedIn()
     }
     
     
     var body: some Scene {
         WindowGroup {
             if familyControlsAuthorizer.authorized {
-                AppView()
+                
+                if !loggedIn {
+                    LoginView(loggedIn: $loggedIn)
+                }
+                
+                else {
+                    AppView()
+                }
+                
             }
-            else{
+            else {
                 Button(action: {requestAuthorization()}) {
                     Label("request authorization", systemImage: "arrow.uturn.forward.circle.fill")
                 }

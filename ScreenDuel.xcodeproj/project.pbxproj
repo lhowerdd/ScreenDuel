@@ -10,6 +10,9 @@
 		162BFC762E0A028300BF9109 /* TopBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162BFC752E0A028300BF9109 /* TopBar.swift */; };
 		162BFC782E0A2E6200BF9109 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162BFC772E0A2E6200BF9109 /* ProfileView.swift */; };
 		162BFC7B2E0CD71B00BF9109 /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162BFC7A2E0CD71B00BF9109 /* EditProfileView.swift */; };
+		1689F1C02E32CDE70055E38C /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1689F1BF2E32CDE70055E38C /* Utility.swift */; };
+		1689F1C32E3410B80055E38C /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1689F1C22E3410B80055E38C /* LoginView.swift */; };
+		1689F1C52E3430850055E38C /* CreateAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1689F1C42E3430850055E38C /* CreateAccountView.swift */; };
 		16970E2A2C76D2B100E3CED1 /* ScreenDuelApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16970E292C76D2B100E3CED1 /* ScreenDuelApp.swift */; };
 		16970E2E2C76D2B200E3CED1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16970E2D2C76D2B200E3CED1 /* Assets.xcassets */; };
 		16970E312C76D2B200E3CED1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16970E302C76D2B200E3CED1 /* Preview Assets.xcassets */; };
@@ -81,6 +84,9 @@
 		162BFC772E0A2E6200BF9109 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		162BFC7A2E0CD71B00BF9109 /* EditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
 		1666E3D22C811B4900CD265C /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		1689F1BF2E32CDE70055E38C /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		1689F1C22E3410B80055E38C /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		1689F1C42E3430850055E38C /* CreateAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountView.swift; sourceTree = "<group>"; };
 		16970E262C76D2B100E3CED1 /* ScreenDuel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScreenDuel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16970E292C76D2B100E3CED1 /* ScreenDuelApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenDuelApp.swift; sourceTree = "<group>"; };
 		16970E2D2C76D2B200E3CED1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -162,6 +168,15 @@
 				162BFC7A2E0CD71B00BF9109 /* EditProfileView.swift */,
 			);
 			path = profileComponents;
+			sourceTree = "<group>";
+		};
+		1689F1C12E34105E0055E38C /* signIn */ = {
+			isa = PBXGroup;
+			children = (
+				1689F1C22E3410B80055E38C /* LoginView.swift */,
+				1689F1C42E3430850055E38C /* CreateAccountView.swift */,
+			);
+			path = signIn;
 			sourceTree = "<group>";
 		};
 		16970E1D2C76D2B100E3CED1 = {
@@ -249,6 +264,7 @@
 		16970E6D2C76D4CB00E3CED1 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				1689F1C12E34105E0055E38C /* signIn */,
 				162BFC792E0CD70100BF9109 /* profileComponents */,
 				162BFC742E09FEBC00BF9109 /* homeComponents */,
 				16D5E8542C76D9B500AA2411 /* TimePickerView.swift */,
@@ -270,6 +286,7 @@
 				16D5E8422C76D93A00AA2411 /* DuelingSession.swift */,
 				16D5E8562C76EE6700AA2411 /* DuelMessenger.swift */,
 				16F1F1622CD92E79006B1890 /* background_timer.swift */,
+				1689F1BF2E32CDE70055E38C /* Utility.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -453,16 +470,19 @@
 				16D5E8572C76EE6700AA2411 /* DuelMessenger.swift in Sources */,
 				16EA9A9D2E31938F005190DE /* DummyDuelCreator.swift in Sources */,
 				16970E362C76D2B200E3CED1 /* ScreenDuel.xcdatamodeld in Sources */,
+				1689F1C52E3430850055E38C /* CreateAccountView.swift in Sources */,
 				16D5E84B2C76D98D00AA2411 /* AppView.swift in Sources */,
 				16EA9A992E316F98005190DE /* NavigationRouter.swift in Sources */,
 				162BFC782E0A2E6200BF9109 /* ProfileView.swift in Sources */,
 				16EA9A972E316F7F005190DE /* Route.swift in Sources */,
 				16D5E8492C76D98800AA2411 /* AppPickerView.swift in Sources */,
+				1689F1C02E32CDE70055E38C /* Utility.swift in Sources */,
 				16D5E84D2C76D99C00AA2411 /* DuelConfigView.swift in Sources */,
 				162BFC762E0A028300BF9109 /* TopBar.swift in Sources */,
 				16D5E8532C76D9B100AA2411 /* ListCellView.swift in Sources */,
 				16970E2A2C76D2B100E3CED1 /* ScreenDuelApp.swift in Sources */,
 				16D5E8512C76D9AA00AA2411 /* DuelSessionView.swift in Sources */,
+				1689F1C32E3410B80055E38C /* LoginView.swift in Sources */,
 				16F1F1632CD92E79006B1890 /* background_timer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
