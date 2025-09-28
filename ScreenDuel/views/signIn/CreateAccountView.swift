@@ -22,7 +22,7 @@ struct CreateAccountView: View {
     @Binding var showingSignUpSheet: Bool
     
     
-    var handleLogin: () -> Void
+    var handleLogin: (String, String) -> Void
     
     
     var body: some View {
@@ -73,7 +73,7 @@ struct CreateAccountView: View {
                     .foregroundColor(.red)
             }
 
-            Button(action: handleCreateAccount) {
+            Button(action: validateInfo) {
                 Text("Create Account")
                     .frame(maxWidth: .infinity)
                     .padding()
@@ -87,18 +87,50 @@ struct CreateAccountView: View {
         .padding()
     }
 
+    
+    
+    func validateInfo(){
+        if username.count < 4 {
+            errorMessage = "Username must be at least 4 characters"
+            return
+        }
+        
+        if password != confirmPassword {
+            errorMessage = "Passwords do not match"
+            return
+        }
+        
+        if password.count < 8 {
+            errorMessage = "Password must be at least 8 characters"
+            return
+        }
+        
+        errorMessage = nil
+        handleCreateAccount()
+        
+    }
+    
+    
+    
     func handleCreateAccount() {
         showingSignUpSheet = false
-        handleLogin()
+        handleLogin(username, password)
     }
 }
+
+
+
 
 
 struct CreateAccount_Previews: PreviewProvider {
-    
     @State static var value2 = true
-    
     static var previews: some View {
-        CreateAccountView(showingSignUpSheet: $value2, handleLogin: {})
+        CreateAccountView(
+            showingSignUpSheet: $value2,
+            //handleLogin: { username, password in print("Logging in with \(username), \(password)")}
+            handleLogin: { username, password in ()}
+        )
     }
 }
+
+

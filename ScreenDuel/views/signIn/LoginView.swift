@@ -27,13 +27,13 @@ struct LoginView: View {
             Text("Login to ScreenDuel")
                 .font(.largeTitle)
                 .bold()
-
+            
             TextField("Username", text: $username)
                 .padding()
                 .background(Color(UIColor.secondarySystemBackground))
                 .cornerRadius(8)
                 .autocapitalization(.none)
-
+            
             if showPassword {
                 TextField("Password", text: $password)
                     .padding()
@@ -46,16 +46,16 @@ struct LoginView: View {
                     .background(Color(UIColor.secondarySystemBackground))
                     .cornerRadius(8)
             }
-
+            
             Toggle("Show Password", isOn: $showPassword)
                 .padding(.horizontal)
-
+            
             if let errorMessage = errorMessage {
                 Text(errorMessage)
                     .foregroundColor(.red)
             }
-
-            Button(action: handleLogin) {
+            
+            Button(action: {handleLogin(username: username, password: password)}) {
                 Text("Sign In")
                     .frame(maxWidth: .infinity)
                     .padding()
@@ -72,7 +72,7 @@ struct LoginView: View {
                 CreateAccountView(showingSignUpSheet: $showingSignUpSheet, handleLogin: handleLogin)
             }
             
-
+            
             Spacer()
         }
         .padding()
@@ -80,11 +80,15 @@ struct LoginView: View {
 
     
     
-    func handleLogin() {
+    func handleLogin(username: String, password: String) {
         loggedIn = true
+        print(username)
+        print(password)
         /**TODO: save changes to cloud and user defaults**/
     }
 }
+
+
 
 
 struct LoginPreview: PreviewProvider {
