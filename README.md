@@ -12,7 +12,7 @@ This project is still in a very preliminary stage. At this time, the user can sh
 ## Current Issues
 ### shielding extension
 
-Efforts have been made to get code to run in the ```DeviceActivityMonitorExtension```. However, this extension is likely not needed for the app to meet its goal specification, as apps can be shielded from the main app. However, for those interested, the efforts made to configure the extension are listed below.
+Efforts have been made to get code to run in the ```DeviceActivityMonitorExtension```. **However, this extension is likely not needed for the app to meet its goal specification**, as apps can be shielded from the main app. However, for those interested, the efforts made to configure the extension are listed below.
 
 These are the current steps that have been taken to further narrow down the cause of this issue
 1. Authentication for FamilyControls is granted at the apps entry point
